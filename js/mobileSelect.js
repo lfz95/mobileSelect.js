@@ -370,7 +370,7 @@ window.MobileSelect = (function() {
 		},
 
 	    getIndex: function(distance){
-	        return Math.round((2*this.liHeight-distance)/this.liHeight);
+	        return Math.round((1*this.liHeight-distance)/this.liHeight);
 	    },
 
 	    getIndexArr: function(){
@@ -404,7 +404,7 @@ window.MobileSelect = (function() {
 	    },
 
 	    calcDistance: function(index){
-			return 2*this.liHeight-index*this.liHeight;
+			return this.liHeight-index*this.liHeight;
 	    },
 
 	    setCurDistance: function(indexArr){
@@ -463,12 +463,12 @@ window.MobileSelect = (function() {
 			        _this.updateCurDistance(theSlider, index);
 			        _this.curDistance[index] = _this.fixPosition(_this.curDistance[index]);
 			        _this.movePosition(theSlider, _this.curDistance[index]);
-			        _this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-3)*_this.liHeight; 
+			        _this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-2)*_this.liHeight; 
 
 
 			        //反弹
-			        if(_this.curDistance[index] + _this.offsetSum > 2*_this.liHeight){
-			            _this.curDistance[index] = 2*_this.liHeight;
+			        if(_this.curDistance[index] + _this.offsetSum > 1*_this.liHeight){
+			            _this.curDistance[index] = 1*_this.liHeight;
 			            setTimeout(function(){
 			                _this.movePosition(theSlider, _this.curDistance[index]);
 			            }, 100);
@@ -523,12 +523,12 @@ window.MobileSelect = (function() {
 			        _this.updateCurDistance(theSlider, index);
 			        _this.curDistance[index] = _this.fixPosition(_this.curDistance[index]);
 			        _this.movePosition(theSlider, _this.curDistance[index]);
-			        _this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-3)*_this.liHeight; 
+			        _this.oversizeBorder = -(theSlider.getElementsByTagName('li').length-2)*_this.liHeight; 
 
 
 			        //反弹
-			        if(_this.curDistance[index] + _this.offsetSum > 2*_this.liHeight){
-			            _this.curDistance[index] = 2*_this.liHeight;
+			        if(_this.curDistance[index] + _this.offsetSum > 1*_this.liHeight){
+			            _this.curDistance[index] = 1*_this.liHeight;
 			            setTimeout(function(){
 			                _this.movePosition(theSlider, _this.curDistance[index]);
 			            }, 100);
